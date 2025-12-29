@@ -54,7 +54,34 @@ def resolve_location(
 
     """
 
-    return prompt
+    payload = {
+        "model" : MODEL,
+        "prompt" : prompt,
+        "stream" : False,
+    }
+
+    try :
+        response = requests.post(OLLAMA_URL, json=payload, timeout=60)
+        response.raise_for_status()
+        result = response.json()
+
+        answer = result = result.get("response", "").strip() #we retrieve the content for the "response" key and make sure the text is nice and clean
+        for char in answer:
+            if char.isdigit():
+                choice = int(char)
+                if 1 <= choice <= len(candidates):
+                    print(f"LLM answer : {answer}")
+                    print(f"LLM candidate selection : {candidates[0]}")
+                    return candidates[choice-1]
+
+        # Fallback: return first candidate
+        print(f"Warning : could not parse the LLM response : {answer}. Returning the default first candidate.")
+        return candidates[0]
+
+    except Exception as e:
+        print(f"Error calling LLM: {e}. Returning back the default first candidate if there is any.")
+        return candidates[0] if candidates else None
+
 
 if __name__ == "__main__":
     paris_candidates = [
