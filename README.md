@@ -1,3 +1,9 @@
+## 🚫 Vibe Coding Disclaimer
+
+**Disclaimer**  
+This repository was **not** created using “vibe coding.”
+
+
 # 🌍 MiniGeoParse
 
 A tiny geoparsing pipeline that extracts locations from text and resolves them to coordinates using LLMs.
@@ -36,8 +42,3 @@ Text → SpaCy NER → OpenStreetMap API → LLM Disambiguation → Coordinates
 - **Gazetteer**: OpenStreetMap Nominatim
 - **LLM**: Ollama (local Mistral ministral-3:3B)
 - **Package Manager**: uv
-
-## 🚫 Vibe Coding Disclaimer
-
-**Disclaimer**  
-This repository was **not** created using “vibe coding.”
