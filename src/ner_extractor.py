@@ -34,7 +34,7 @@ def extract_locations(text : str) -> list[str] :
     return locations
 
 if __name__ == "__main__":
-     sample = "The wildfire spread near Montpellier, affecting the Hérault department."
+     sample = "I traveled from Paris to Lyon, then visited the Alps near Geneva."
      print(f"Input : {sample}")
 
      # Debug : Show ALL entities the model finds
