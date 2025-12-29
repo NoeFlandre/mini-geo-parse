@@ -8,7 +8,7 @@ Extracts geographic named entities from text using SpaCy
 
 import spacy
 
-nlp = spacy.load("en_core_web_sm") # here we are loading the model once as it is an expensive operation hence why we load it at the module level. The model chosen is a small English language model trained on web text. It includes a pre-trained NER component that can already recognize locations, people, organizations and so o
+nlp = spacy.load("en_core_web_lg") # here we are loading the model once as it is an expensive operation hence why we load it at the module level. The model chosen is a small English language model trained on web text. It includes a pre-trained NER component that can already recognize locations, people, organizations and so o
 
 GEO_LABELS = {"LOC", "GPE"} # here we are specifying the labels we consider as geographic. These includes Geo-Political Entity (GPE) (countries, cities, states) and Non-GPE locations (LOC) (moutains, rivers, regions)
 
