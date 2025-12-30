@@ -36,6 +36,18 @@ Geneva  → Genève, Switzerland                    📍 (46.20, 6.15)
 Text → SpaCy NER → OpenStreetMap API → LLM Disambiguation → Coordinates
 ```
 
+## Benchmark Results
+
+Evaluated on the [GeoWebNews](https://github.com/milangritta/Pragmatic-Guide-to-Geoparsing-Evaluation) benchmark:
+
+| Metric | Value |
+|--------|-------|
+| **Accuracy@161km** | 55.61% |
+| Correct | 416 |
+| Total | 540 |
+
+> Accuracy@161km measures if predicted coordinates are within 161km (100 miles) of ground truth.
+
 ## Tech Stack
 
 - **NER**: SpaCy (en_core_web_lg)
