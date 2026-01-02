@@ -1,3 +1,7 @@
+
+![mini-geo-parse logo](logo.png)
+
+
 ## 🚫 Vibe Coding Disclaimer
 
 **Disclaimer**  
