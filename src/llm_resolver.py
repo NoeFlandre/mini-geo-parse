@@ -71,7 +71,7 @@ def resolve_location(
                 choice = int(char)
                 if 1 <= choice <= len(candidates):
                     print(f"LLM answer : {answer}")
-                    print(f"LLM candidate selection : {candidates[0]}")
+                    print(f"LLM candidate selection : {candidates[choice-1]}")
                     return candidates[choice-1]
 
         # Fallback: return first candidate

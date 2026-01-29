@@ -46,9 +46,9 @@ Evaluated on the [GeoWebNews](https://github.com/milangritta/Pragmatic-Guide-to-
 
 | Metric | Value |
 |--------|-------|
-| **Accuracy@161km** | 55.61% |
-| Correct | 416 |
-| Total | 540 |
+| **Accuracy@161km** | 55.21% |
+| Correct | 413 |
+| Total | 748 |
 
 > Accuracy@161km measures if predicted coordinates are within 161km (100 miles) of ground truth.
 
